@@ -2,6 +2,8 @@
 const jokeEl = document.getElementById("joke");
 const get_joke = document.getElementById("get_joke");
 
+
+
 get_joke.addEventListener("click", generateJoke);
 
 generateJoke();
@@ -21,3 +23,11 @@ async function generateJoke(){
 
     jokeEl.innerHTML = joke.joke;
 }
+const share = document.getElementById("share");
+const sharejoke = document.querySelector("#share-btn");
+
+sharejoke.addEventListener("click", ()=>{
+     
+    share.classList.toggle("show");
+
+})
