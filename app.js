@@ -2,6 +2,8 @@
 const jokeEl = document.getElementById("joke");
 const get_joke = document.getElementById("get_joke");
 
+const msg = document.getElementsByClassName("resp-sharing-button__link");
+
 
 
 get_joke.addEventListener("click", generateJoke);
@@ -28,6 +30,13 @@ const sharejoke = document.querySelector("#share-btn");
 
 sharejoke.addEventListener("click", ()=>{
      
+    
     share.classList.toggle("show");
+    document.getElementById("msg").setAttribute("href","whatsapp://send?text= " + jokeEl.innerHTML);
+    document.getElementById("msg1").setAttribute("href","https://twitter.com/intent/tweet/?text=  " + jokeEl.innerHTML);
+    document.getElementById("msg2").setAttribute("href","https://telegram.me/share/url?text=   " + jokeEl.innerHTML);
+
+    
+    
 
 })
