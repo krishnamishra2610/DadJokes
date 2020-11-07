@@ -20,10 +20,11 @@ async function generateJoke(){
    
    const joke = await jokeRes.json();
 
-   console.log(joke);
+   
     //set the new joke
 
     jokeEl.innerHTML = joke.joke;
+    share.classList.add("show");
 }
 const share = document.getElementById("share");
 const sharejoke = document.querySelector("#share-btn");
@@ -35,8 +36,17 @@ sharejoke.addEventListener("click", ()=>{
     document.getElementById("msg").setAttribute("href","whatsapp://send?text= " + jokeEl.innerHTML);
     document.getElementById("msg1").setAttribute("href","https://twitter.com/intent/tweet/?text=  " + jokeEl.innerHTML);
     document.getElementById("msg2").setAttribute("href","https://telegram.me/share/url?text=   " + jokeEl.innerHTML);
-
-    
-    
-
 })
+
+            //    text to speech
+
+    tts = document.getElementById("textSpeech");
+
+    tts.addEventListener("click", ()=>{
+
+        
+
+            responsiveVoice.speak(jokeEl.innerHTML);
+            console.log("on clicked");
+        
+    })
