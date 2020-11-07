@@ -6,6 +6,7 @@ body{
 background-color: #5DADE2 ;
 font-family: 'Roboto Mono', monospace;
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
 height: 100vh;
@@ -79,6 +80,7 @@ h3{
     border: 0;
     border-radius: 20px;
     
+    
     color: black;
      font-size : 15px;
     padding: 15px 40px;
@@ -95,7 +97,38 @@ h3{
   outline: 0;
 }
 
+#textSpeech{
+  background-color: rgba(128, 128, 128, 0.541);
+    border: 0;
+    border-radius: 20px;
+  
+    
+    color: black;
+     font-size : 15px;
+    padding: 15px 40px;
+    cursor: pointer;
+    margin-right: 10px;
+ 
+}
+#textSpeech:active{
+  transform: scale(0.98);
+}
 
+#textSpeech:focus{
+  outline: 0;
+}
+
+footer{
+  margin-top: 15px;
+  font-size: 20px;
+  
+  
+}
+footer i{
+  color: black;
+  margin: 4px;
+  
+}
 
 
                               /* share button */
@@ -274,3 +307,65 @@ background-color: #FF6600
 
 .resp-sharing-button--telegram:hover {
   background-color: #4B97D1;}
+
+                 /* responsive  */
+
+@media(max-width:768px){
+
+
+  .buttons{
+
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .btn{
+
+    background-color: #E2925D;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1), 
+    0 6px 6px rgba(0,0,0,0.1);
+    color: #ffffff;
+     font-size : 18px;
+    padding: 15px 15px;
+    cursor: pointer;
+
+}
+
+#share-btn{
+
+  background-color: rgba(128, 128, 128, 0.541);
+    border: 0;
+    border-radius: 20px;
+    
+    
+    color: black;
+     font-size : 16px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-left: 10px;
+ 
+}
+
+#textSpeech{
+
+  background-color: rgba(128, 128, 128, 0.541);
+    border: 0;
+    border-radius: 20px;
+    
+    
+    color: black;
+     font-size : 16px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-right 10px;
+ 
+}
+
+
+
+
+
+}
