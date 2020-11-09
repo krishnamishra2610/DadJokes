@@ -46,7 +46,7 @@ sharejoke.addEventListener("click", ()=>{
 
         
 
-            responsiveVoice.speak(jokeEl.innerHTML);
+            responsiveVoice.speak(jokeEl.innerHTML , "Hindi Female");
             console.log("on clicked");
         
     })
